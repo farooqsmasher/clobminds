@@ -1,0 +1,12 @@
+.form-box1 {
+    width: 400px;
+    height: auto;
+    padding: 25px;
+    background-color:hsl(0, 28%, 93%);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    /* display:block; */
+}
