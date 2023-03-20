@@ -1,8 +1,8 @@
 
-<div class="container  m-5" >
-    <form [formGroup]="login" (ngSubmit)="logindata(login)" class="form m-5 form-box  border rounded shadow ">
+<div class="container  m-5 " >
+    <form [formGroup]="login" (ngSubmit)="logindata(login)" class="form m-5 form-box  border rounded shadow  bg-dark ">
 
-        <h1 class="h1 text-center text-primary">login</h1>
+        <h1 class="h1 text-center text-primary">LOGIN</h1>
         <div class=" form-group form-floating mb-3">
             <input type="email" formControlName="email"  class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
@@ -11,14 +11,17 @@
             <input type="password" formControlName="password" class="form-control" id="floatingPassword" aria-label="passwordhelp" placeholder="Password">
             <label for="floatingPassword">Password</label>
             <small id="passwordhelp" class="form-text text-muted">Password must be atleast 8 characters long.</small>
-            <span class="float-end mt-2">Create new account? <a routerLink="/signup"> SIGNUP</a></span>
+            <span class="float-end mt-2 text-light">Create new account? <a routerLink="/signup" class="text-decoration-none"> SIGNUP</a></span>
           </div>
           
           <div class="d-grid  col-3 mx-auto mt-5">
-            <button class="btn btn-primary" type="submit">LOGIN</button>
+            <button class="btn btn-primary" type="submit" routerLink="/dashboard">LOGIN</button>
             
           </div>
     </form>
 </div>
+
+
+
 
 <router-outlet> </router-outlet>

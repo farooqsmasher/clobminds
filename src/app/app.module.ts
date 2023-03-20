@@ -9,6 +9,7 @@ import { User } from './models/user/user.model';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 // import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SignupComponent } from './components/signup/signup.component';
     AppComponent,
     AddUserComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
