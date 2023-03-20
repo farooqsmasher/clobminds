@@ -8,12 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { User } from './models/user/user.model';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { CreateNewComponent } from './components/create-new/create-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddUserComponent,
-    LoginComponent
+    LoginComponent,
+    ForgotPasswordComponent,
+    CreateNewComponent
   ],
   imports: [
     BrowserModule,
