@@ -4,13 +4,18 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component'
 import { CreateNewComponent } from './components/create-new/create-new.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import { NavComponent } from './components/nav/nav.component';
+
 const routes: Routes = [
 
   { path: 'add', component: AddUserComponent },
   {redirectTo:'' ,path:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'forgot-password', component:ForgotPasswordComponent},
-  {path:'create-new', component:CreateNewComponent}
+  {path:'create-new', component:CreateNewComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'nav',component:NavComponent}
 ];
 
 @NgModule({
@@ -18,3 +23,6 @@ const routes: Routes = [
   exports: [RouterModule],  
 })
 export class AppRoutingModule { }
+
+
+
