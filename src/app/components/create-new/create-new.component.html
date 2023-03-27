@@ -1,35 +1,37 @@
 <!-- <p>create-new works!</p> -->
 <div class="container d-flex justify-content-center m-5">
     
-    <form class="form border shadow border-light rounded-3 m-2 p-5 ">
+    <form  [formGroup]="createnew" (ngSubmit)="createnewdata(createnew)" class="form border shadow border-light rounded-3 m-2 p-5 ">
         <div class="text-center">
         <img src="assets/logo6.png" 
               style="width:150px;" alt="logo">
             </div>
         <div class="form-floating  mb-3 ">
-            <input type="text" class="form-control" id="floatingInput" placeholder="shruti">
+            <input type="text" formControlName="fname" class="form-control" id="floatingInput" placeholder="shruti">
             <label for="floatingInput">Enter Your FirstName</label>
           </div>
           <div class="form-floating  mb-3 ">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" formControlName="lname" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Enter Your LastName</label>
           </div>
           <div class="form-floating  mb-3 ">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="text"  formControlName="phno" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Enter Your PhoneNumber</label>
           </div>
           <div class="form-floating  mb-3 ">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email"  formControlName="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Enter Your Email</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password"   formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Enter New Password</label>
           </div>
           <div class="text-center">
-        <button class="btn btn-primary gradient-custom-2 ml-2" type="submit" routerLink="/login">SIGNUP</button>
-          <!-- </div> -->
-        </div>
+            <span>you have already account<a routerLink="login">&nbsp;signin</a></span>
+            <br>
+        <button class="btn btn-primary gradient-custom-2 ml-2" type="submit">SIGNUP</button>
+                </div>
         
       </form>
     </div>
+    <router-outlet></router-outlet>

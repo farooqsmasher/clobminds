@@ -10,8 +10,7 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { CreateNewComponent } from './components/create-new/create-new.component';
-// import { NavComponent } from './app/components/nav/nav.component';
-// import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 <section class="h-100 gradient-form" style="background-color: #eee;">
-    <form [formGroup]="login"(ngSubmit)="logindata(login)" class="form">
+    <form class="form">
 
 
   <div class="container py-5 h-100">
@@ -16,7 +16,7 @@
                   <h4 class="mt-1 mb-5 pb-1">We are The Clobmind Team</h4>
                 </div>
 
-                <form>
+                <form [formGroup]="login"(ngSubmit)="logindata(login)">
                   <p>Please login to your account</p>
 
                   <div class="form-group  form-outline mb -4">
@@ -31,8 +31,8 @@
                     <input type="password" formControlName="password" id="floatingpassword" class="form-control"  placeholder="password" />
                     <label class="form-label" for="form2Example22">Password</label>
                   </div>
-                    <div>
-                  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" routerLink="/dashboard">Login</button>&nbsp;&nbsp;&nbsp;&nbsp; 
+                   <div>
+                  <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Login</button>&nbsp;&nbsp;&nbsp;&nbsp; 
                     <a href="http://localhost:4200/forgot-password" class="forgot-link float-right text-primary text-decoration-none">Forgot password?</a>
                     </div>
 
@@ -40,6 +40,8 @@
                     <p class="mb-0 me-2">Don't have an account?</p>
                     <a href="http://localhost:4200/create-new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create New</a>
                   </div>
+
+                  <!-- <span>Crete new Account<a routerLink="createnew">createnew</a></span> -->
 
                 </form>
 
