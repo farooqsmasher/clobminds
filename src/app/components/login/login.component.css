@@ -1,0 +1,44 @@
+
+.form-box {
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    background-color:hsl(0, 28%, 93%);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+input.ng-invalid {
+border-left: 5px solid red;
+}
+input.ng-valid {
+    border-left: 5px solid green;
+}
+.error {
+    color:red;
+}
+
+.gradient-custom-2 {
+    
+    background: #da8248;
+    
+    
+    background: -webkit-linear-gradient(to right, #bd33c7, #472992, #244fd0, #4593b4);
+    
+    background: linear-gradient(to right,#bd33c7, #472992, #244fd0, #4593b4);
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    z-index: 1;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
