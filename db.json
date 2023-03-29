@@ -1,0 +1,36 @@
+{
+  "signup": [
+    {
+      "fname": "shruti",
+      "lname": "n",
+      "email": "shru@gmail.com",
+      "phone": "1234567889",
+      "password": "123456788",
+      "id": 1
+    },
+    {
+      "fname": "Ranjitha",
+      "lname": "reddy",
+      "email": "ranjithareddy@gmail.com",
+      "phone": "9999999999",
+      "password": "123456qwee",
+      "id": 2
+    },
+    {
+      "fname": "Ashwini",
+      "lname": "swamy",
+      "email": "ashwiniswamy@gamil.com",
+      "phone": "99784567874",
+      "password": "qwerty1234",
+      "id": 3
+    },
+    {
+      "fname": "mallu",
+      "lname": "gowda",
+      "email": "mallugowda@gmail.com",
+      "phone": "8308788146",
+      "password": "mallugowda",
+      "id": 4
+    }
+  ]
+}

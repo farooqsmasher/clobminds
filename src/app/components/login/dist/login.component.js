@@ -9,16 +9,48 @@ exports.__esModule = true;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
+    function LoginComponent(formbuilder, _route, http, toast) {
+        this.formbuilder = formbuilder;
+        this._route = _route;
+        this.http = http;
+        this.toast = toast;
     }
+    Object.defineProperty(LoginComponent.prototype, "email", {
+        get: function () { return this.login.get('email'); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LoginComponent.prototype, "password", {
+        get: function () { return this.login.get('password'); },
+        enumerable: true,
+        configurable: true
+    });
     LoginComponent.prototype.ngOnInit = function () {
         this.login = new forms_1.FormGroup({
-            'email': new forms_1.FormControl(),
-            'password': new forms_1.FormControl
+            'email': new forms_1.FormControl('', [forms_1.Validators.required, forms_1.Validators.email]),
+            'password': new forms_1.FormControl('', forms_1.Validators.required)
         });
     };
     LoginComponent.prototype.logindata = function (login) {
-        console.log(this.login.value);
+        var _this = this;
+        // console.log(this.login.value);
+        console.warn(this.login);
+        this.http.get('http://localhost:3000/signup').subscribe(function (res) {
+            var user = res.find(function (a) {
+                return a.email === _this.login.value.email && a.password === _this.login.value.password;
+            });
+            if (user) {
+                alert('you are successfully logged in..');
+                _this.login.reset();
+                _this._route.navigate(['dashboard']);
+            }
+            else {
+                alert('user not found!please signup');
+                _this._route.navigate(['login']);
+            }
+        }, function (err) {
+            alert('something was wrong');
+        });
     };
     LoginComponent = __decorate([
         core_1.Component({

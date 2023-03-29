@@ -1,7 +1,7 @@
-<div class="container  m-5" >
-    <form [formGroup]="signup" (ngSubmit)="signupdata(signup)" class="form m-5 form-box1 border rounded shadow bg-dark ">
+<!-- <div class="container border rounded shadow m-5" >
+    <form [formGroup]="signup" (ngSubmit)="signupdata(signup)" class="form m-5">
 
-        <h1 class="h1 text-center text-primary">SIGNUP</h1>
+        <h1 class="h1 text-center text-primary">signup</h1>
 
         <div class=" form-group form-floating mb-3">
             <input type="text" formControlName="fname"  class="form-control" id="floatingInput" placeholder="Enter your first name..">
@@ -26,7 +26,7 @@
             <input type="password" formControlName="password" class="form-control" id="floatingPassword" aria-label="passwordhelp" placeholder=" Enter Password">
             <label for="floatingPassword">Password</label>
             <small id="passwordhelp" class="form-text text-muted">Password must be atleast 8 characters long.</small>
-            <span class="float-end mt-2 text-light">Already have account? <a routerLink="/login" class="text-decoration-none"> LOGIN</a></span>
+            <span class="float-end mt-2">Already have account? <a routerLink="/login"> LOGIN</a></span>
           </div>
           
           <div class="d-grid  col-3 mx-auto mt-5">
@@ -34,6 +34,82 @@
             
           </div>
     </form>
-</div>
+</div> -->
 
 <router-outlet></router-outlet>
+
+
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <form class="form">
+
+
+<div class="container py-5 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-xl-10">
+      <div class="card rounded-3 text-black">
+        <div class="row g-0"> 
+          <div class="col-lg-6">
+            <div class="card-body p-md-5 mx-md-4">
+
+              <div class="text-center">
+                <img src="assets/logo6.png"
+                  style="width:150px;" alt="logo">
+                <h4 class="mt-1 mb-5 pb-1">We are The Clobmind Team</h4>
+              </div>
+
+              <form [formGroup]="signup" (ngSubmit)="signupdata(signup)" class="form m-5">
+
+                <h1 class="h1 text-center text-primary">signup</h1>
+        
+                <div class=" form-group form-floating mb-3">
+                    <input type="text" formControlName="fname"  class="form-control" id="floatingInput" placeholder="Enter your first name..">
+                    <label for="floatingInput"> First Name</label>
+                    <span  class="error"*ngIf= "fname?.invalid && fname?.touched" >first name is required</span>
+                  </div>
+        
+        
+                  <div class=" form-group form-floating mb-3">
+                    <input type="text" formControlName="lname"  class="form-control" id="floatingInput" placeholder="Enter your  last name..">
+                    <label for="floatingInput"> Last Name</label>
+                    <span  class="error" *ngIf= "lname?.invalid && lname?.touched" >Email is required</span>
+                  </div>
+        
+                <div class=" form-group form-floating mb-3">
+                    <input type="email" formControlName="email"  class="form-control" id="floatingInput" placeholder="Enter your Email">
+                    <label for="floatingInput">Email address</label>
+                    <span  class="error" *ngIf= "email?.invalid && email?.touched">Email is required</span>
+                  </div>
+                  <div class=" form-group form-floating mb-3">
+                    <input type="text" formControlName="phone"  class="form-control" id="floatingInput"    placeholder="Enter your phone number..">
+                    <label for="floatingInput">Phone Number</label>
+                    <span  class="error" *ngIf= "phone?.invalid && phone?.touched">Phone Number is required</span>
+                  </div>
+                  <div class=" form-group form-floating">
+                    <input type="password" formControlName="password" class="form-control" id="floatingPassword" aria-label="passwordhelp" placeholder=" Enter Password">
+                    <label for="floatingPassword">Password</label>
+                    <span  class="error"*ngIf= "password?.invalid && password?.touched" >Password is required</span>
+                    <!-- <small id="passwordhelp" class="form-text text-muted">Password must be atleast 8 characters long.</small> -->
+                    <span class="float-end mt-2">Already have account? <a routerLink="/login"> LOGIN</a></span>
+                  </div>
+                  
+                  <div class="d-grid  col-3 mx-auto mt-5">
+                    <button class="btn btn-primary" [disabled]= "signup?.invalid" type="submit">SIGNUP</button>
+                    
+                  </div>
+            </form>
+
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+              <h4 class="mb-4">We are more than just a company</h4>
+              <p class="small mb-0">Clobminds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+</section>

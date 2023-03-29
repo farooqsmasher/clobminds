@@ -10,7 +10,9 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-// import {HttpClientModule} from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr/public_api';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    
     
   ],
   providers: [],
